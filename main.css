@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow&display=swap');
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  width: 100%;
+  background-color: aqua;
+}
+
+#container header {
+  width: 100%;
+  display: flex;
+  flex-grow: row wrap;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+#container header #head-name {
+  width: 50%;
+  display: flex;
+  padding-left: 180px;
+  font-size: 32px;
+  font-family: 'PT Sans Narrow', sans-serif;;
+  
+}
+#container header .search {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search .input {
+  height: 50px;
+  width: 50px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-size: 23px;
+  transition: width 0.3s ease;
+  border-bottom: 2px solid aliceblue;
+  background-color: aliceblue;
+  transition: 0.3s;
+}
+
+.search .input:hover {
+  border-bottom: 2px solid black;
+  transition: 0.4s;
+}
+/*230px*/
+.search .btn {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  position: absolute;
+  transition: transform 0.3s ease;
+  background-color: aliceblue;
+  cursor: pointer;
+  font-size: 25px;
+
+}
+.search.active .input {
+  width: 250px;
+}
+
+.search.active .btn {
+  transform: translateX(100px);
+}
